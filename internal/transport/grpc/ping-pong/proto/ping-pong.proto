@@ -1,0 +1,18 @@
+// Copyright(c) 2021 Altessa Solutions Inc.
+// All rights reserved.
+
+syntax = "proto3";
+package sn.pingpong.v1;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "./;pingpongpb_v1";
+
+
+message PingResponse {
+  string pong = 1;
+}
+
+service PingPong {
+  rpc Ping (google.protobuf.Empty) returns (PingResponse) {}
+}

@@ -1,0 +1,38 @@
+## Grpc options.
+grpc:
+  # Specifies the address to bind to for listening.
+  # By default: 0.0.0.0:7777
+  listenAddress: '0.0.0.0:7777'
+
+  # Enable reflection service. Reflection service provides information about publicly-accessible
+  # gRPC services on a server, and assists clients at runtime to construct RPC requests and responses without
+  # precompiled service information.
+  # By default: false
+  reflection: false
+
+  # By default: false
+  clientCertAuth: false
+
+## PostgreSql options.
+postgresql:
+  # By default: localhost
+  host: 'localhost'
+
+  # By default: 5432
+  port: 5432
+
+  # Specifies database name.
+  # By defaults: sn
+  database: 'sn'
+
+  # Specifies user for authentication.
+  username: ''
+
+  # Specifies user's password for authentication.
+  password: ''
+
+## Logger options.
+logger:
+  # Activation level for logger, must be one of the following: 'error', 'warning', 'info', 'debug'.
+  # By default: `error`.
+  level: debug
